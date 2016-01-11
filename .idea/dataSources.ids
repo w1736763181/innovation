@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="PostgreSQL - innovation@localhost" uuid="b3509e18-5a7e-48c7-966b-9294deb25040">
+    <database-info product="PostgreSQL" version="9.4.5" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4.1207.jre7">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.4">
+      <database id="1" name="innovation"/>
+      <schema id="2" parent="1" name="public">
+        <object-id>2200</object-id>
+        <comment>standard public schema</comment>
+        <introspection-state-number>680</introspection-state-number>
+        <introspection-timestamp>2016-01-06.17:39:44.567</introspection-timestamp>
+      </schema>
+      <table id="3" parent="2" name="users">
+        <object-id>16394</object-id>
+        <state-number>680</state-number>
+      </table>
+      <column id="4" parent="3" name="email">
+        <state-number>680</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="5" parent="3" name="first_name">
+        <state-number>680</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="6" parent="3" name="last_name">
+        <state-number>680</state-number>
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="7" parent="3" name="phone">
+        <state-number>680</state-number>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="8" parent="3" name="head">
+        <state-number>680</state-number>
+        <data-type>varchar</data-type>
+      </column>
+      <index id="9" parent="3" name="users_pkey">
+        <object-id>16400</object-id>
+        <columns>email</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="10" parent="3" name="users_pkey">
+        <columns>email</columns>
+        <underlying-index>users_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
