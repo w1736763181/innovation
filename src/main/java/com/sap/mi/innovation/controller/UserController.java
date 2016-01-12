@@ -3,6 +3,9 @@ package com.sap.mi.innovation.controller;
 import com.sap.mi.innovation.model.UsersEntity;
 import com.sap.mi.innovation.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,7 +17,7 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping(value = "User")
+@RequestMapping(value = "user")
 public class UserController {
 
     // 自动装配
@@ -29,5 +32,17 @@ public class UserController {
 
         // 返回 pages 目录下的 userManage.jsp 页面
         return userList;
+    }
+
+    //用户注册
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    public ResponseEntity<UsersEntity> registerUser(@RequestBody UsersEntity user) {
+        try {
+            userRepository.saveAndFlush(user);
+            return new ResponseEntity<UsersEntity>(user, HttpStatus.OK);
+        } catch(Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<UsersEntity>(HttpStatus.EXPECTATION_FAILED);
+        }
     }
 }
