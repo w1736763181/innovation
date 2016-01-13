@@ -27,11 +27,8 @@ public class UserController {
     // 用户管理
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public List<UsersEntity> getAllUsers() {
-        // 找到user表里的所有记录
-        List<UsersEntity> userList = userRepository.findAll();
-
         // 返回 pages 目录下的 userManage.jsp 页面
-        return userList;
+        return userRepository.findAll();
     }
 
     //用户注册
