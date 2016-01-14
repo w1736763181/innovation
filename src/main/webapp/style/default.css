@@ -1,3 +1,40 @@
 .ui-header{
     background-color: black !important;
 }
+
+.header-text{
+    text-shadow: none !important;
+    color: white !important;
+    font-size: 20px !important;
+    display: inline-block !important;
+}
+
+.header-button{
+    background-color: transparent !important;
+    color: white !important;
+    border: none !important;
+    font-size: 16px !important;
+    text-shadow: none !important;
+    padding: .7em 0 !important;
+}
+
+#reg_one, #reg_two{
+    background: url(../image/theme/backgroud.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.ui-input-text, input{
+    background-color: transparent !important;
+    border:none !important;
+}
+
+#main_page{
+    background: url(../image/theme/homepage.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
