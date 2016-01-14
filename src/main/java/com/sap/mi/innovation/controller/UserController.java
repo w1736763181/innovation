@@ -45,4 +45,19 @@ public class UserController {
             return new ResponseEntity<UsersEntity>(HttpStatus.EXPECTATION_FAILED);
         }
     }
+    //用户登录
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public ResponseEntity<String> login(@RequestBody UsersEntity user){
+        List<UsersEntity> userLsit = userRepository.findUserByEmail(user.getEmail());
+        if(userLsit.isEmpty()){
+            return new ResponseEntity<String>("Email not registered.", HttpStatus.UNAUTHORIZED);//-1 represents this email is not registered
+        }
+        else{
+            UsersEntity loginUser = userLsit.get(0);
+            if(!user.getPassword().equals(loginUser.getPassword())){
+                return new ResponseEntity<String>("Wrong password.", HttpStatus.UNAUTHORIZED);
+            }
+                return new ResponseEntity<String>("Login successfully.", HttpStatus.OK);
+        }
+    }
 }
