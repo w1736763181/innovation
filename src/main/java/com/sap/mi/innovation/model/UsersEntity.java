@@ -1,5 +1,8 @@
 package com.sap.mi.innovation.model;
 
+import org.hibernate.annotations.Generated;
+import org.hibernate.annotations.GenerationTime;
+
 import javax.persistence.*;
 
 /**

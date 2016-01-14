@@ -12,8 +12,22 @@
 </head>
 <body>
 
-<div data-role="page"  id="main_page">
-    <a href="register/reg_one.html">Register</a>
+<div data-role="page" data-add-back-btn="true" id="login">
+    <div data-role="header" class="header">
+        <a href="#" class="header-button ui-button-left" data-rel="back"><</a>
+        <h1 class="header-text">Log In</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <figure>
+
+        </figure>
+        <label for="username">Email</label>
+        <input type="email" id="username" />
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" />
+        <button type="button" class="btn btn-success btn-block">Log In</button>
+    </div>
 </div>
 
 </body>

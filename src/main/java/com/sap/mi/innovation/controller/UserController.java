@@ -2,6 +2,7 @@ package com.sap.mi.innovation.controller;
 
 import com.sap.mi.innovation.model.UsersEntity;
 import com.sap.mi.innovation.repository.UserRepository;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,11 +28,8 @@ public class UserController {
     // 用户管理
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public List<UsersEntity> getAllUsers() {
-        // 找到user表里的所有记录
-        List<UsersEntity> userList = userRepository.findAll();
-
         // 返回 pages 目录下的 userManage.jsp 页面
-        return userList;
+        return userRepository.findAll();
     }
 
     //用户注册
@@ -42,6 +40,8 @@ public class UserController {
             return new ResponseEntity<UsersEntity>(user, HttpStatus.OK);
         } catch(Exception e) {
             e.printStackTrace();
+            Logger logger = Logger.getLogger(UserController.class);
+            logger.error(e.getMessage());
             return new ResponseEntity<UsersEntity>(HttpStatus.EXPECTATION_FAILED);
         }
     }
