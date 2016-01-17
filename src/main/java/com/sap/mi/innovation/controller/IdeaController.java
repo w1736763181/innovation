@@ -34,7 +34,7 @@ public class IdeaController {
     }
 
     @RequestMapping(value = "/createIdea", method = RequestMethod.POST)
-    public ResponseEntity<String> createIdea(@RequestParam(value = "file", required = false) MultipartFile file,
+    public ResponseEntity<String> createIdea(@RequestParam(value = "image", required = false) MultipartFile[] uploadImage,
                                              @RequestParam(value = "uid", required = false) int uid,
                                              @RequestParam(value = "cid", required = false) int cid,
                                              @RequestParam(value = "title", required = false) String title,
@@ -61,17 +61,23 @@ public class IdeaController {
             logger.error(e.getMessage());
             return new ResponseEntity<String>(HttpStatus.EXPECTATION_FAILED);
         }
-        String ideaDirPath = "C:\\Users\\I309908\\IdeaProjects\\Innovation_Zoo\\src\\main\\resources\\image\\idea\\"+savedIdea.getId();
+        String ps = File.separator;
+        String ideaDirPath = System.getProperty("user.home")+ps+"IdeaProjects"+ps+"innovation_zoo"+ps+"src"+ps+"main"+ps+"uploadedImage"+ps+"idea"+ps+savedIdea.getId();
+//        String ideaDirPath = "C:\\Users\\I309908\\IdeaProjects\\Innovation_Zoo\\src\\main\\uploadImage\\idea\\"+savedIdea.getId();
+        System.out.println(ideaDirPath);
         File ideaDir = new File(ideaDirPath);
         if(!ideaDir.exists())
-            ideaDir.mkdir();
-        BufferedImage src = ImageIO.read(new ByteArrayInputStream(file.getBytes()));
-        File destination = new File(ideaDir + "\\"+file.getOriginalFilename()+".png");
-        if(!destination.exists())
-        destination.createNewFile();
-
-        ImageIO.write(src, "png", destination);
-        return ResponseEntity.ok("get image");
+            ideaDir.mkdirs();
+        for(int i = 0; i < uploadImage.length;i++) {
+            BufferedImage src = ImageIO.read(new ByteArrayInputStream(uploadImage[i].getBytes()));
+            File destination = new File(ideaDirPath + ps + uploadImage[i].getOriginalFilename() + ".png");
+            System.out.println(uploadImage[i].getOriginalFilename());
+            System.out.println(uploadImage[i].getName());
+            if (!destination.exists())
+                destination.createNewFile();
+            ImageIO.write(src, "png", destination);
+        }
+        return ResponseEntity.ok("Idea created successfully");
     }
 
 }
