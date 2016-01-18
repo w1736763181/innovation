@@ -10,8 +10,8 @@
       <schema id="2" parent="1" name="public">
         <object-id>2200</object-id>
         <comment>standard public schema</comment>
-        <introspection-state-number>704</introspection-state-number>
-        <introspection-timestamp>2016-01-12.15:39:30.569</introspection-timestamp>
+        <introspection-state-number>711</introspection-state-number>
+        <introspection-timestamp>2016-01-17.11:27:57.579</introspection-timestamp>
       </schema>
       <sequence id="3" parent="2" name="category_id_seq">
         <object-id>16423</object-id>
@@ -204,8 +204,8 @@
         <data-type>varchar(15)</data-type>
       </column>
       <column id="44" parent="11" name="head">
-        <state-number>683</state-number>
-        <data-type>varchar(30)</data-type>
+        <state-number>711</state-number>
+        <data-type>text</data-type>
       </column>
       <column id="45" parent="11" name="password">
         <state-number>684</state-number>

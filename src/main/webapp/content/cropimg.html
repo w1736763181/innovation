@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,11 +17,22 @@
 </head>
 <body>
 
-<div data-role="page"  id="main_page">
-    <a href="createIdea/step_one.html">Create idea</a>
-    <a href="login.html" class="pull-right" style="margin-top: 5px; margin-right: 5px">
-    <img src="../image/theme/button/login.png" />
-    </a>
+
+<div data-role="page" data-add-back-btn="true" id="crop">
+
+    <div data-role="header" class="header">
+        <a href="#" class="header-button ui-button-left" data-rel="back"><</a>
+        <h1 class="header-text">Select Image</h1>
+        <a href="#" class="header-button ui-button-right" onclick="cropConfirm()">Confirm</a>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <div class="container">
+            <div class="img-container">
+                <img src="../image/head/default.png" alt="Picture" id="img-crop">
+            </div>
+        </div>
+    </div>
 </div>
 
 </body>

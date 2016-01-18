@@ -2,13 +2,15 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="../../jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="../../bootstrap-3.3.6-dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="../style/default.css" />
-    <script src="../script/jquery/jquery-1.12.0.min.js"></script>
-    <script src="../jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../style/default.css" />
+    <link rel="stylesheet" href="../../style/cropper.css"/>
+    <script src="../../script/jquery/jquery-1.12.0.min.js"></script>
+    <script src="../../jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="../../bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
-    <script src="../script/default.js"></script>
+    <script src="../../script/default.js"></script>
+    <script src="../../script/cropper.js"></script>
 </head>
 <body>
 
@@ -16,18 +18,20 @@
     <div data-role="header" class="header">
         <a href="#" class="header-button ui-button-left" data-rel="back"><</a>
         <h1 class="header-text">Register</h1>
-        <a href="#" class="header-button ui-btn-right" id="reg_done">Done</a>
+        <a href="#" class="header-button ui-btn-right" id="reg_two_next" onclick="reg_next()">Next</a>
     </div>
 
     <div data-role="main" class="ui-content">
-        <label for="fname">Last Name</label>
-        <input type="text" name="firstname" id="fname" />
-        <label for="lname">First Name</label>
-        <input type="text" name="firstname" id="lname" />
-        <label for="department">Department</label>
-        <input type="text" id="department" />
-        <label for="phone">Phone</label>
-        <input type="text" name="phone" id="phone" />
+        <figure>
+            <img class="user-head center-block img-circle" src="../../image/head/default.png" id="user_head"/>
+        </figure>
+        <br/>
+        <br/>
+        <br/>
+        <span class="btn btn-success btn-file btn-block btn-sm">
+            Upload Avatar<input type="file" accept="image/*" id="input_head" onchange="uploadAvatar()">
+        </span>
+        <button type="button" class="btn-block btn btn-success" onclick="uploadSkip()">Skip</button>
     </div>
 </div>
 
