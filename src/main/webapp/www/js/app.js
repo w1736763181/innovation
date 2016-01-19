@@ -4,7 +4,8 @@ var app = angular.module('myApp', [
 	'mainService',
 	'mainDirective',
 	'mainController',
-	'mainRouter'
+	'mainRouter',
+    'angular-carousel'
 ]);
 
 app.config(['$compileProvider', function ($compileProvider) {

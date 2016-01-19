@@ -1,26 +1,29 @@
+
 <div id="idea-preview">
     <nav nav-top data-left="<" data-right="Submit"
          fn-left = "go()" fn-right=""></nav>
     <div class="top-content">
         <img class="icon" ng-src="img/head.png"/>
         <div class="text">
-            <p class="title">Innovation Gamification App</p>
+            <p class="title">{{idea.title}}</p>
             <p class="creator">Siqi Zhuo</p>
         </div>
     </div>
     <div class="idea-pics">
-        <img class="ideapic" ng-src="img/rm.png"/>
+        <ul rn-carousel class="image">
+            <li ng-repeat="image in idea.imgsSrc">
+                <div class="layer">{{image}}</div>
+            </li>
+        </ul>
     </div>
     <div class="idea-content">
-        <div class="decription">
+        <div class="description">
             <label class="desclable">Description</label>
-            <p class="desctext">Share with you a video about Siemens and SAP to deliver the Siemens Cloud for Industry, the market leading
-                IoT Platform based on the SAP HANA Cloud Platform as a Service offering for industrial customers.</p>
-            </div>
+            <p class="desctext">{{idea.description}}</p>
+        </div>
         <div class="bi">
-        <label class="bilable">Business Impact</label>
-            <p class="bitext">Share with you a video about Siemens and SAP to deliver the Siemens Cloud for Industry, the market leading
-                IoT Platform based on the SAP HANA Cloud Platform as a Service offering for industrial customers.</p>
+            <label class="bilable">Business Impact</label>
+            <p class="bitext">{{idea.impact}}</p>
         </div>
     </div>
 

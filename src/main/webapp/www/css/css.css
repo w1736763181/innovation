@@ -60,7 +60,7 @@ textarea {
 .page-container .page-view .pages {
   width: 100%;
   height: 100%;
-  background-image: url('/img/bg.png');
+  background-image: url('../img/bg.png');
   background-size: 100% 100%;
 }
 .btn {
@@ -160,7 +160,7 @@ nav.inverse a:hover {
   border-bottom: 1px solid #f00;
 }
 #homepage {
-  background-image: url('/img/homepage.png');
+  background-image: url('../img/homepage.png');
   background-size: 100% 100%;
 }
 #homepage .btn {
@@ -171,7 +171,7 @@ nav.inverse a:hover {
   text-align: center;
   width: 26%;
   height: 19%;
-  background-image: url('/img/duihuakuang.png');
+  background-image: url('../img/duihuakuang.png');
   background-size: 100% 100%;
   user-select: none;
   -webkit-user-select: none;
@@ -821,4 +821,37 @@ nav.inverse a:hover {
   transform: scale(1, 0);
   -webkit-transform: scale(1, 0);
   display: block !important;
+}
+#idea-preview .top-content  {
+  padding-top:18%;
+}
+#idea-preview .top-content .icon{
+  width:55px;
+  padding-left:5%;
+  float:left;
+}
+#idea-preview .top-content .text{
+  float:center;
+}
+#idea-preview .top-content .text .title {
+  padding-left:25%;
+  font-size:1.2em;
+}
+#idea-preview .top-content .text .creator{
+  padding-left:25%;
+  padding-top:4%;
+}
+#idea-preview .idea-pics{
+  padding-top:8%;
+
+}
+#idea-preview .idea-pics .ideapic {
+  width: 100%;
+  border:1px solid #eee;
+}
+#idea-preview .idea-content{
+  padding-top:5%;
+}
+#idea-preview .idea-content .bi{
+  padding-top:5%;
 }
