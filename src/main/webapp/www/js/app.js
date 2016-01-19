@@ -7,7 +7,10 @@ var app = angular.module('myApp', [
 	'mainRouter'
 ]);
 
-app.run(['$rootScope', '$location', '$window', function ($rootScope, $location, $window) {
+app.config(['$compileProvider', function ($compileProvider) {
+        $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|local|data|blob):/);
+}])
+.run(['$rootScope', '$location', '$window', function ($rootScope, $location, $window) {
     $rootScope.go = function (path, pageAnimationClass) {
 
         if (typeof(pageAnimationClass) === 'undefined') {
@@ -35,4 +38,4 @@ app.run(['$rootScope', '$location', '$window', function ($rootScope, $location, 
 	$rootScope.$on('$routeChangeSuccess', function(e,to,toP,from,fromP){
 		//console.log(1)
 	})
-}]);
+}])

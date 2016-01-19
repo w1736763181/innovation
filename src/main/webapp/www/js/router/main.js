@@ -33,19 +33,19 @@ router.config(['$routeProvider', function($routeProvider){
             templateUrl : 'template/idea/create.html'			
 		})
 		.when('/idea/create_step1', {
-            controller : 'ideaCreate1Ctrl',
+            controller : 'ideaCreateCtrl',
             templateUrl : 'template/idea/create_step1.html'			
 		})
 		.when('/idea/create_step2', {
-            controller : 'ideaCreate2Ctrl',
+            controller : 'ideaCreateCtrl',
             templateUrl : 'template/idea/create_step2.html'			
 		})
 		.when('/idea/create_step3', {
-            controller : 'ideaCreate3Ctrl',
+            controller : 'ideaCreateCtrl',
             templateUrl : 'template/idea/create_step3.html'			
 		})
 		.when('/idea/create_step4', {
-            controller : 'ideaCreate4Ctrl',
+            controller : 'ideaCreateCtrl',
             templateUrl : 'template/idea/create_step4.html'			
 		})		
         .otherwise({

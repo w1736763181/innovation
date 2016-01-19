@@ -34,3 +34,12 @@ direc.directive('modal',[function(){
 		}
 	}
 }])
+.directive('changeFile',[function(){
+	return {
+		restrict: 'A',
+		link: function (scope, element, attrs) {
+			var onChangeHandler = scope.$eval(attrs.changeFile);
+			element.bind('change', onChangeHandler);
+		}
+	};
+}])

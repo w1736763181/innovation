@@ -1,10 +1,21 @@
-<div id="idea-create-step1" class="pages">
+<div id="idea-create-step4" class="pages">
 	<nav nav-top data-left="<" data-right="Next" data-center="Create Idea"
 	     fn-left="go()" fn-right=""></nav>
 	<div class="content">
 		<p class="step-img"></p>
 		<p class="step-title">Upload Picture</p>
 		<p class="step-desrcip">fdsa</p>
-		<p class="add-pic"></p>
-	</div>		 
+		<div class="add-pic">
+			<div class="imgs">
+				<div class="img" ng-repeat="img in idea.imgsSrc track by $index">
+					<img ng-src="{{img}}" />
+					<span class="close" ng-click="remove($index)">X</span>
+				</div>
+				<div class="img add">
+					<input type="file" change-file='change' />
+					<img src="/img/head.png" />
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

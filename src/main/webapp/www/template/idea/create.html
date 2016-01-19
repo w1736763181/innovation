@@ -4,31 +4,38 @@
 	<div class="content">
 		<p class="desc1">dsa fdasf  dsaf f ds f dsf ds f dsa f sa f ds f ds f dsa f dsa f </p>
 		<div class="imgs">
-			<label class="lab-1" for="inp-1"></label>
-			<input type="radio" id="inp-1" name="type" value="1" ng-model="ideaType"/>
-			<div class="img1" ng-class="{'active':ideaType==1}">
-				<p class="title"></p>
-				<p class="img"></p>
-				<p class="bottom"></p>
+			<input type="radio" id="inp-1" name="type" value="1" ng-model="idea.ideaType"/>
+			<div class="div-img img1" ng-class="{'active':idea.ideaType==1}">
+				<label class="lab-1" for="inp-1"></label>
+				<p class="title">Giraffe</p>
+				<p class="img"><img src="/img/animals/1giraffe_idea.png" /></p>
+				<p class="bottom">Connecting the Dots</p>
 			</div>
-			<label class="lab-2" for="inp-2"></label>
-			<input type="radio" id="inp-2" name="type" value="2" ng-model="ideaType"/>
-			<div class="img2" ng-class="{'active':ideaType==2}">
-				<p class="title"></p>
-				<p class="img"></p>
-				<p class="bottom"></p>		
+			<input type="radio" id="inp-2" name="type" value="2" ng-model="idea.ideaType"/>
+			<div class="div-img img2" ng-class="{'active':idea.ideaType==2}">
+				<label class="lab-2" for="inp-2"></label>
+				<p class="title">Lion</p>
+				<p class="img"><img src="/img/animals/4lion_idea.png" /></p>
+				<p class="bottom">Show Off</p>		
 			</div>
-			<label class="lab-3" for="inp-3"></label>
-			<input type="radio" id="inp-3" name="type" value="3" ng-model="ideaType"/>
-			<div class="img3" ng-class="{'active':ideaType==3}">
-				<p class="title"></p>
-				<p class="img"></p>
-				<p class="bottom"></p>		
-			</div>
+			<input type="radio" id="inp-3" name="type" value="3" ng-model="idea.ideaType"/>
+			<div class="div-img img3" ng-class="{'active':idea.ideaType==3}">
+				<label class="lab-3" for="inp-3"></label>
+				<p class="title">Eagle</p>
+				<p class="img"><img src="/img/animals/10eagle_idea.png" /></p>
+				<p class="bottom">Cloud</p>		
+			</div>	
+			<input type="radio" id="inp-4" name="type" value="4" ng-model="idea.ideaType"/>
+			<div class="div-img img4" ng-class="{'active':idea.ideaType==4}">
+				<label class="lab-4" for="inp-4"></label>
+				<p class="title">Monkey</p>
+				<p class="img"><img src="/img/animals/7monkey_idea.png"/></p>
+				<p class="bottom">Monkey</p>		
+			</div>		
 		</div>
 		<p class="desc2">fdsf fdasf </p>
 		<p class="select">
-			<a class="btn" ng-class="{'disabled':!ideaType}" ng-click="go('/idea/create_step1', 'slideLeft')">Select</a>
+			<a class="btn" ng-class="{'disabled':!idea.ideaType}" ng-click="go('/idea/create_step1', 'slideLeft')">Select</a>
 		</p>	
 	</div>
 </div>

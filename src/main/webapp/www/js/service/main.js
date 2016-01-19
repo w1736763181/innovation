@@ -20,4 +20,26 @@ service.factory('upload', ['$http', function($http) {
 	return {
 		upload:upload
 	}
-}]);
+}])
+.factory('ideaModel',[function(){
+	var idea={
+		title:'',
+		description:'',
+		type:'',
+		impact:'',
+		imgsSrc:[],
+		files:[],
+	}
+	var clear=function(){
+		idea.title="";
+		idea.description="";
+		idea.type="";
+		idea.impact="";
+		idea.imgsSrc.length=0;
+		idea.files.length=0;
+	}
+	return{
+		idea:idea,
+		clear:clear
+	}
+}])
