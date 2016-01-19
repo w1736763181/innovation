@@ -43,18 +43,24 @@ mainCtcl.controller('homepageCtrl', [function(){
 .controller('loginCtrl', ['$scope', 'DEFAULT_AVATAR', function($scope,DEFAULT_AVATAR){
 	$scope.imgSrc=DEFAULT_AVATAR;
 }])
-.controller('ideaCreateCtrl',['$scope', function($scope){
-	$scope.ideaType='';
-}])
-.controller('ideaCreate1Ctrl',['$scope', function($scope){
-
-}])
-.controller('ideaCreate2Ctrl',['$scope', function($scope){
-
-}])
-.controller('ideaCreate3Ctrl',['$scope', function($scope){
-
-}])
-.controller('ideaCreate4Ctrl',['$scope', function($scope){
-
+.controller('ideaCreateCtrl',['ideaModel','$scope', function(ideaM,$scope){
+	$scope.idea=ideaM.idea;
+	
+	$scope.remove=function(idx){
+		$scope.idea.imgsSrc.splice(idx,1);
+	}
+	
+	$scope.add=function(file){
+		console.log(file)
+	}	
+	
+	$scope.change=function(e){
+		var file=e.target.files[0];
+		if(!file){
+			return;
+		}
+		$scope.idea.files.push(file);
+		$scope.idea.imgsSrc.push(URL.createObjectURL(file))
+		$scope.$digest()
+	}
 }])
