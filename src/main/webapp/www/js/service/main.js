@@ -1,6 +1,6 @@
 var service = angular.module('mainService', []);
 
-service.constant('DEFAULT_AVATAR', '/img/head.png');
+service.constant('DEFAULT_AVATAR', 'img/head.png');
 
 service.factory('upload', ['$http', function($http) {
 	var upload=function(fd,cb){
