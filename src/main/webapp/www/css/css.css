@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'comfortaa';
-  src: url('/font/Comfortaa-Regular.ttf') format('truetype');
+  src: url('../font/Comfortaa-Regular.ttf') format('truetype');
 }
 * {
   margin: 0;
@@ -529,7 +529,7 @@ nav.inverse a:hover {
 #idea-create-step1 .content .step-img {
   margin: 1em 0;
   height: 2em;
-  background-image: url('/img/step.png');
+  background-image: url('../img/step.png');
   background-repeat: no-repeat;
   background-size: 100% 400%;
 }
@@ -568,7 +568,7 @@ nav.inverse a:hover {
 #idea-create-step2 .content .step-img {
   margin: 1em 0;
   height: 2em;
-  background-image: url('/img/step.png');
+  background-image: url('../img/step.png');
   background-repeat: no-repeat;
   background-size: 100% 400%;
 }
@@ -622,7 +622,7 @@ nav.inverse a:hover {
 #idea-create-step3 .content .step-img {
   margin: 1em 0;
   height: 2em;
-  background-image: url('/img/step.png');
+  background-image: url('../img/step.png');
   background-repeat: no-repeat;
   background-size: 100% 400%;
 }
@@ -679,7 +679,7 @@ nav.inverse a:hover {
 #idea-create-step4 .content .step-img {
   margin: 1em 0;
   height: 2em;
-  background-image: url('/img/step.png');
+  background-image: url('../img/step.png');
   background-repeat: no-repeat;
   background-size: 100% 400%;
 }
@@ -972,36 +972,45 @@ nav.inverse a:hover {
   -webkit-transform: scale(1, 0);
   display: block !important;
 }
+#idea-preview {
+  height:100%;
+  background-color: white;
+}
 #idea-preview .top-content  {
   padding-top:18%;
+  position:relative;
+  height:10%;
 }
 #idea-preview .top-content .icon{
-  width:55px;
-  padding-left:5%;
-  float:left;
-}
-#idea-preview .top-content .text{
-  float:center;
+  width:15%;
+  position:absolute;
+  left:5%;
+  top:50%;
 }
 #idea-preview .top-content .text .title {
-  padding-left:25%;
-  font-size:1.2em;
+  position:absolute;
+  left:25%;
+  top:50%;
+  font-size:1.3em;
 }
 #idea-preview .top-content .text .creator{
-  padding-left:25%;
-  padding-top:4%;
+  position:absolute;
+  left:25%;
+  top:80%;
+  font-size:0.8em;
 }
 #idea-preview .idea-pics{
   padding-top:8%;
-
+  height:35%;
 }
-#idea-preview .idea-pics .ideapic {
-  width: 100%;
-  border:1px solid #eee;
-}
-#idea-preview .idea-content{
-  padding-top:5%;
+#idea-preview .idea-content label{
+  font-size:1.1em;
+  color:#8B4513;
+  padding-left:5%;
 }
 #idea-preview .idea-content .bi{
   padding-top:5%;
+}
+#idea-preview .idea-content p{
+  padding-left:5%;
 }
