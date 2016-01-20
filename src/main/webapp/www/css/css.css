@@ -992,12 +992,14 @@ nav.inverse a:hover {
   left:25%;
   top:50%;
   font-size:1.3em;
+  color:#8B4513;
 }
 #idea-preview .top-content .text .creator{
   position:absolute;
   left:25%;
   top:80%;
   font-size:0.8em;
+  color:#32CD32;
 }
 #idea-preview .idea-pics{
   padding-top:8%;
