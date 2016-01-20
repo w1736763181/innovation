@@ -39,7 +39,18 @@ direc.directive('modal',[function(){
 		restrict: 'A',
 		link: function (scope, element, attrs) {
 			var onChangeHandler = scope.$eval(attrs.changeFile);
-			element.bind('change', onChangeHandler);
+			element.bind('change',onChangeHandler)
+		}
+	};
+}])
+.directive('wrapScroll',[function(){
+	return {
+		restrict: 'AE',
+		link: function (scope, element, attrs) {
+			setTimeout(function(){
+				var myScroll = new IScroll('#'+attrs.wrapScroll);
+			},0) 
+			
 		}
 	};
 }])

@@ -91,6 +91,7 @@ textarea {
 }
 nav {
   position: fixed;
+  z-index: 9999;
   top: 0;
   left: 0;
   width: 100%;
@@ -811,6 +812,7 @@ nav.inverse a:hover {
   position: absolute;
   bottom: 0;
   right: 0;
+  left: 0;
   background: rgba(0, 0, 0, 0.8);
   color: #fff;
   padding-left: 1em;
@@ -835,6 +837,13 @@ nav.inverse a:hover {
   display: inline-block;
   text-align: center;
   width: 18%;
+}
+#idea-list #wrap {
+  position: absolute;
+  top: 3.5em;
+  bottom: 4em;
+  left: 0;
+  right: 0;
 }
 /*
  page enter&leave animation
