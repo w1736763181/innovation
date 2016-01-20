@@ -48,10 +48,14 @@ router.config(['$routeProvider', function($routeProvider){
             controller : 'ideaCreateCtrl',
             templateUrl : 'template/idea/create_step4.html'			
 		})
-        .when('/idea/idea_preview', {
+		.when('/idea/idea_preview', {
             controller : 'ideaCreateCtrl',
             templateUrl : 'template/idea/idea_preview.html'
         })
+		.when('/idea/list', {
+            controller : 'ideaListCtrl',
+            templateUrl : 'template/idea/list.html'			
+		})		
         .otherwise({
             redirectTo : 'homepage'
         });

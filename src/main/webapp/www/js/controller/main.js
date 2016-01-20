@@ -64,3 +64,7 @@ mainCtcl.controller('homepageCtrl', [function(){
 		$scope.$digest()
 	}
 }])
+.controller('ideaListCtrl',['$scope','ideaListModel',function($scope,list){
+	$scope.ideaList=list.get();
+	
+}])

@@ -1,0 +1,51 @@
+<div id="idea-list">
+	<nav nav-top data-left="<" data-center="Idea"
+	     fn-left="go()"></nav>
+	<p class="list-header">
+		Time Period
+		<input type="date" ng-model="fromDate"/>
+		-
+		<input type="date" ng-model="toDate"/>
+	</p>
+	
+	<div class="list-item" ng-repeat="item in ideaList">
+		<div class="item-h">
+			<div class="avatar">
+				<img src="{{item.type}}"/>
+			</div>
+			<h4 ng-click="go('/idea/{{item.id}}','slideLeft')">{{item.title}}</h4>
+			<p>
+				<a class="author" ng-click="go('/user/{{item.authorLink}}','slideLeft')">{{item.author}}</a>
+				<i class="like">{{item.like}}like</i>
+			</p>
+		</div>
+		<div class="img">
+			<img ng-src="{{item.src}}" />
+			<p class="description">
+				{{item.description}}
+			</p>
+		</div>
+		<p class="date">
+			{{item.date}}
+			<span ng-switch="item.pjState">
+				<span ng-switch-when="1">
+					<a ng-click="pj-todo">Approve Project</a>
+				</span>
+				<span ng-switch-when="2">
+					<a ng-click="pj-todo">Generate Project</a>
+				</span>
+				<span ng-switch-when="3">
+					<a class="pj">Project</a>
+				</span>				
+			</span>
+		</p>
+	</div>
+	
+	<p class="list-bottom">
+		<a ng-click="go('refresh')">Idea</a>
+		<a>Project</a>
+		<a ng-click="go('/idea/create','slideLeft')">egg</a>
+		<a ng-click="go('/user/list','slideLeft')">People</a>
+		<a ng-click="go('/user/index','slideLeft')">Me</a>
+	</p>
+</div>
