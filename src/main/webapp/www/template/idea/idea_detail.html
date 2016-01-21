@@ -1,19 +1,19 @@
 
-<div id="idea-detail">
+<div id="idea-preview">
     <nav nav-top data-left="<" data-center="Idea Detail" data-right=""
          fn-left = "go()" fn-right=""></nav>
     <div wrap-scroll="wrap" id="wrap">
         <div>
             <div class="top-content">
                 <img class="icon" ng-src="img/head.png" />
-                <p class="title">title</p>
-                <p class="creator">Siqi Zhuo</p>
+                <p class="title">{{item.title}}</p>
+                <p class="creator">{{item.author}}</p>
             </div>
             <div class="idea-pics">
                 <ul rn-carousel  rn-carousel-index="carouselIndex" class="image">
-                    <li  ng-repeat="image in idea.imgsSrc track by $index">
+                    <li  ng-repeat="image in item.src track by $index">
                         <div ng-style="{'background-image': 'url(' + image + ')'}">
-                            <div rn-carousel-indicators ng-if="idea.imgsSrc.length > 1" slides="idea.imgsSrc" rn-carousel-index="carouselIndex"></div>
+                            <div rn-carousel-indicators ng-if="item.src.length > 1" slides="item.src" rn-carousel-index="carouselIndex"></div>
                         </div>
                     </li>
                 </ul>
@@ -21,11 +21,11 @@
             <div class="idea-content">
                 <div class="description">
                     <label class="desclable">Description</label>
-                    <p class="desctext">{{idea.description}}</p>
+                    <p class="desctext">{{item.description}}</p>
                 </div>
                 <div class="bi">
                     <label class="bilable">Business Impact</label>
-                    <p class="bitext">{{idea.impact}}</p>
+                    <p class="bitext">{{item.impact}}</p>
                 </div>
             </div>
         </div>
