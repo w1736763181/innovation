@@ -2,8 +2,21 @@ var mainCtcl = angular.module('mainController', []);
 
 
 
-mainCtcl.controller('homepageCtrl', [function(){
-	
+mainCtcl.controller('homepageCtrl', ['$scope','userMeModel', function($scope,userMeModel){
+	$scope.logInAndOut=function(go,out){
+		if(!$scope.isLogin){
+			go('/user/login', 'slideLeft');
+		}else{
+			out();
+		}
+	}
+	$scope.logout=function(){
+		userMeModel.logout();
+		$scope.isLogin=false;
+		$scope.loginOrOut='Login';
+	}
+	$scope.isLogin=userMeModel.isLogin;
+	$scope.loginOrOut=($scope.isLogin?'Logout':'Login')
 }])
 .controller('register1Ctrl', ['$scope', function($scope){
 	//
@@ -40,10 +53,25 @@ mainCtcl.controller('homepageCtrl', [function(){
 		$scope.show=false;
 	}	
 }])
-.controller('loginCtrl', ['$scope', 'DEFAULT_AVATAR', function($scope,DEFAULT_AVATAR){
+.controller('loginCtrl', ['$scope', 'DEFAULT_AVATAR','userMeModel', function($scope,DEFAULT_AVATAR,userMeModel){
 	$scope.imgSrc=DEFAULT_AVATAR;
+	$scope.show=false;
+	$scope.login=function(username,pwd){
+		userMeModel.login(username,pwd);
+		
+		$scope.show=true;
+		//SUCCESS
+		$scope.title="SUCCESS";
+		$scope.content="LOGIN SUCCESS!";
+		$scope.fnOk=function(go){
+			go();
+		}
+		//FAILED
+	}
 }])
-.controller('ideaCreateCtrl',['ideaModel','$scope', function(ideaM,$scope){
+.controller('ideaCreateCtrl',['ideaModel','$scope', 'userMeModel', function(ideaM,$scope,userMeModel){
+	userMeModel.needLogin();
+	
 	$scope.idea=ideaM.idea;
 	
 	$scope.remove=function(idx){

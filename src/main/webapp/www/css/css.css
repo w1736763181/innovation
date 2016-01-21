@@ -835,8 +835,56 @@ nav.inverse a:hover {
 }
 #idea-list .list-bottom a {
   display: inline-block;
+  height: 4em;
   text-align: center;
   width: 18%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 2em 2em;
+  vertical-align: bottom;
+  line-height: 6em;
+}
+#idea-list .list-bottom a.idea {
+  background-image: url('../img/icon/idea_normal.png');
+}
+#idea-list .list-bottom a.idea.active,
+#idea-list .list-bottom a.idea:active,
+#idea-list .list-bottom a.idea:hover {
+  background-image: url('../img/icon/idea_selected.png');
+}
+#idea-list .list-bottom a.project {
+  background-image: url('../img/icon/project_normal.png');
+}
+#idea-list .list-bottom a.project.active,
+#idea-list .list-bottom a.project:active,
+#idea-list .list-bottom a.project:hover {
+  background-image: url('../img/icon/project_selected.png');
+}
+#idea-list .list-bottom a.egg {
+  background-image: url('../img/icon/create_normal.png');
+  background-size: 3em 4em;
+  transform: translate3d(0, -1em, 0);
+  -webkit-transform: translate3d(0, -1em, 0);
+}
+#idea-list .list-bottom a.egg:active,
+#idea-list .list-bottom a.egg:hover {
+  background-image: url('../img/icon/create_selected.png');
+}
+#idea-list .list-bottom a.people {
+  background-image: url('../img/icon/people_normal.png');
+}
+#idea-list .list-bottom a.people.active,
+#idea-list .list-bottom a.people:active,
+#idea-list .list-bottom a.people:hover {
+  background-image: url('../img/icon/people_selected.png');
+}
+#idea-list .list-bottom a.me {
+  background-image: url('../img/icon/me_normal.png');
+}
+#idea-list .list-bottom a.me.active,
+#idea-list .list-bottom a.me:active,
+#idea-list .list-bottom a.me:hover {
+  background-image: url('../img/icon/me_selected.png');
 }
 #idea-list #wrap {
   position: absolute;

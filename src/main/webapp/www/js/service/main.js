@@ -72,3 +72,35 @@ service.factory('upload', ['$http', function($http) {
 		get:get_list
 	}
 }])
+.factory('userMeModel', ['$rootScope',function($rootScope){
+	var user={
+		isLogin:false,
+		model:{},
+		login:function(username,pwd){
+			//HTTP POST
+			//SET COOKIE
+			//-----SUCCESS
+			this.isLogin=true;		
+			this.model={};
+		},
+		logout:function(){
+			this.isLogin=false;
+			//HTTP POST 
+			//CLEAR COOKIE
+		},
+		register:function(user){
+			this.isLogin=false;
+			//HTTP POST
+			//----SUCCESS
+			this.isLogin=true;
+			this.model=user;
+		},
+		needLogin:function(){
+			if(!this.isLogin){
+				$rootScope.go('/user/login', 'slideLeft');
+			}
+		}
+	};
+	
+	return user;
+}])

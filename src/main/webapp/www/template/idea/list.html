@@ -44,10 +44,10 @@
 		</div>
 	</div>
 	<p class="list-bottom">
-		<a ng-click="go('refresh')">Idea</a>
-		<a>Project</a>
-		<a ng-click="go('/idea/create','slideLeft')">egg</a>
-		<a ng-click="go('/user/list','slideLeft')">People</a>
-		<a ng-click="go('/user/index','slideLeft')">Me</a>
+		<a ng-click="go('refresh')" class="idea" ng-class="{active:listType==1}">Idea</a>
+		<a ng-click="go('/project/list')" class="project" ng-class="{active:listType==2}">Project</a>
+		<a ng-click="go('/idea/create','slideLeft')" class="egg"></a>
+		<a ng-click="go('/user/list','slideLeft')" class="people" ng-class="{active:listType==3}">People</a>
+		<a ng-click="go('/user/index','slideLeft')" class="me" ng-class="{active:listType==4}">Me</a>
 	</p>
 </div>

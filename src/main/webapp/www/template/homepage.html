@@ -1,7 +1,6 @@
 <div id="homepage" class="pages">
-	<nav class="inverse" nav-top data-show-right="true" data-right="Login"
-	 fn-right="go('/user/login', 'slideLeft')"></nav>
-	 
+	<nav class="inverse" nav-top data-show-right="true" data-right="{{loginOrOut}}"
+	 fn-right="logInAndOut(go,logout)"></nav>
 	<div class="block idea">
 		<p class="title">idea</p>
 		<p class="number"><a ng-click="go('/idea/list','slideLeft')">123</a></p>
@@ -15,9 +14,9 @@
 		<p class="number"><a>44</a></p>	
 	</div>
 	<div class="block-egg">
-		<img class="dialog" src="/img/createidea.png"/>
+		<img class="dialog" src="img/createidea.png"/>
 		<a ng-click="go('/idea/create', 'slideLeft')">
-			<img class="egg" src="/img/egg.png"/>
+			<img class="egg" src="img/egg.png"/>
 		</a>
 	</div>
 </div>

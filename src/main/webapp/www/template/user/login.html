@@ -1,6 +1,6 @@
 <div id="page-login" class="pages">
 	<nav nav-top data-left="<" data-center="Login"
-	     fn-left="go()"></nav>
+	     fn-left="go('/homepage','slideLeft')"></nav>
 	<form name="regForm">
 		<div name="regForm" class="form">
 			<p class="p-img">
@@ -17,7 +17,7 @@
 			</p>
 			<input type="password" name="password" ng-model="password" id="password" required/>	
 			<p class="p-submit">
-				<a class="btn" ng-class="{'disabled':!regForm.$valid}">Log in</a>
+				<a class="btn" ng-class="{'disabled':!regForm.$valid}" ng-click="login(username,password)">Log in</a>
 			</p>
 			<div class="div-forget">
 				<p><a ng-click="go('/user/register_step1', 'slideLeft')">Register</a></p>
@@ -25,4 +25,6 @@
 			</div>
 		</div>
 	</form>
+	<div ng-show="show" class="modal" data-title="{{title}}" data-content="{{content}}" 
+	  fn-ok="fnOk(go)" data-ok="ok"></div>	
 </div>

@@ -39,7 +39,11 @@ direc.directive('modal',[function(){
 		restrict: 'A',
 		link: function (scope, element, attrs) {
 			var onChangeHandler = scope.$eval(attrs.changeFile);
-			element.bind('change',onChangeHandler)
+			element.bind('change',onChangeHandler);
+			
+			scope.$on('$destroy', function(){
+				element.unbind('change')					
+			})
 		}
 	};
 }])
@@ -49,6 +53,10 @@ direc.directive('modal',[function(){
 		link: function (scope, element, attrs) {
 			setTimeout(function(){
 				var myScroll = new IScroll('#'+attrs.wrapScroll);
+				scope.$on('$destroy', function(){
+					myScroll.destroy();
+					myScroll = null;
+				})
 			},0) 
 			
 		}

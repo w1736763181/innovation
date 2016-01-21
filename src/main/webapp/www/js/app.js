@@ -11,7 +11,7 @@ var app = angular.module('myApp', [
 app.config(['$compileProvider', function ($compileProvider) {
         $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|local|data|blob):/);
 }])
-.run(['$rootScope', '$location', '$window', function ($rootScope, $location, $window) {
+.run(['$rootScope', '$location', '$window', 'userMeModel', function ($rootScope, $location, $window, userMeModel) {
     $rootScope.go = function (path, pageAnimationClass) {
 
         if (typeof(pageAnimationClass) === 'undefined') {
