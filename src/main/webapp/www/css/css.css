@@ -95,7 +95,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  height: 8%;
+  height: 3em;
   background: #000;
   user-select: none;
   -webkit-user-select: none;
@@ -1137,43 +1137,54 @@ nav.inverse a:hover {
   height:100%;
   background-color: white;
 }
+#idea-preview #wrap {
+  position: absolute;
+  top: 4em;
+  bottom: 4em;
+  left: 0;
+  right: 0;
+}
 #idea-preview .top-content  {
-  padding-top:18%;
   position:relative;
-  height:10%;
+  height:3em;
 }
 #idea-preview .top-content .icon{
-  width:15%;
+  width:3em;
+  left:1em;
   position:absolute;
-  left:5%;
-  top:50%;
 }
-#idea-preview .top-content .text .title {
+#idea-preview .top-content .title {
   position:absolute;
-  left:25%;
-  top:50%;
+  left:4em;
   font-size:1.3em;
   color:#8B4513;
+  top:0;
 }
-#idea-preview .top-content .text .creator{
+#idea-preview .top-content .creator{
   position:absolute;
-  left:25%;
-  top:80%;
+  left:6.5em;
   font-size:0.8em;
   color:#32CD32;
+  bottom:0;
 }
 #idea-preview .idea-pics{
-  padding-top:8%;
-  height:35%;
+  margin-top:1em;
+  height:15em;
 }
 #idea-preview .idea-content label{
   font-size:1.1em;
   color:#8B4513;
-  padding-left:5%;
+  padding-left:1em;
+}
+#idea-preview .idea-content{
+  margin-top:1em;
 }
 #idea-preview .idea-content .bi{
-  padding-top:5%;
+  margin-top:1em;
 }
 #idea-preview .idea-content p{
-  padding-left:5%;
+  margin-top:0.5em;
+  padding-left:1em;
+  padding-right:1em;
+  color:#363636;
 }

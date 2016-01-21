@@ -1,6 +1,10 @@
 var service = angular.module('mainService', []);
 
 service.constant('DEFAULT_AVATAR', 'img/head.png');
+service.constant('ANIMAL_IMAGES', [['img/animals/1giraffe_idea.png','img/animals/2giraffe_designfinish.png','img/animals/3giraffe_readyfordone.png'],
+	['img/animals/4lion_idea.png','img/animals/5lion_designfinish.png','img/animals/6lion_readyfordone.png'],
+	['img/animals/7monkey_idea.png','img/animals/8monkey_designfinish.png','img/animals/9monkey_readyfordone.png'],
+	['img/animals/10eagle_idea.png','img/animals/11eagle_designfinish.png','img/animals/12eagle_readyfordone.png']]);
 
 service.factory('upload', ['$http', function($http) {
 	var upload=function(fd,cb){

@@ -11,7 +11,7 @@ var app = angular.module('myApp', [
 app.config(['$compileProvider', function ($compileProvider) {
         $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|local|data|blob):/);
 }])
-.run(['$rootScope', '$location', '$window', 'userMeModel', function ($rootScope, $location, $window, userMeModel) {
+.run(['$rootScope', '$location', '$window', 'userMeModel', 'ANIMAL_IMAGES', function ($rootScope, $location, $window, userMeModel, ANIMAL_IMAGES) {
     $rootScope.go = function (path, pageAnimationClass) {
 
         if (typeof(pageAnimationClass) === 'undefined') {
@@ -39,4 +39,5 @@ app.config(['$compileProvider', function ($compileProvider) {
 	$rootScope.$on('$routeChangeSuccess', function(e,to,toP,from,fromP){
 		//console.log(1)
 	})
+    $rootScope.iconSrc = ANIMAL_IMAGES;
 }])
