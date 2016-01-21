@@ -104,3 +104,43 @@ service.factory('upload', ['$http', function($http) {
 	
 	return user;
 }])
+.factory('projectListModel', ['$rootScope',function($rootScope){
+	//TEST
+	var temp_item={
+			title:'innovation gomification app',
+			id:66,
+			author:'lili',
+			authorLink:'/user/12',
+			like: 8111,
+			description:'fdsafdsfds fda fdsa fdsaf  da f dsa f dsf a dsf ds f dsa f dsa f dsaf ads fds ',
+			src:'https://www.baidu.com/img/bd_logo1.png',	
+			type:'/img/animals/4lion_idea.png',	
+			date:'2016-01-19 16:22',
+			pjState:'4'
+		}
+		
+	var get_list=function(){
+		return [
+			temp_item,
+			angular.copy(temp_item),
+			angular.copy(temp_item),
+			angular.copy(temp_item),
+			angular.copy(temp_item)
+		];
+	}
+	
+	return {
+		get:get_list
+	}
+}])
+.factory('projectCreateModel',[function(){
+	var project={
+	}
+	var clear=function(){
+
+	}
+	return{
+		project:project,
+		clear:clear
+	}
+}])

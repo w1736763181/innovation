@@ -57,8 +57,13 @@ direc.directive('modal',[function(){
 					myScroll.destroy();
 					myScroll = null;
 				})
-			},0) 
-			
+			},0)
 		}
+	};
+}])
+.directive('listBottom',[function(){
+	return {
+		restrict: 'AEC',
+		templateUrl:'template/part/list_bottom.html'
 	};
 }])

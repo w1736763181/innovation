@@ -94,5 +94,13 @@ mainCtcl.controller('homepageCtrl', ['$scope','userMeModel', function($scope,use
 }])
 .controller('ideaListCtrl',['$scope','ideaListModel',function($scope,list){
 	$scope.ideaList=list.get();
+	$scope.listType=1;
+	
+}])
+.controller('projectListCtrl',['$scope','projectListModel',function($scope,list){
+	$scope.projectList=list.get();
+	$scope.listType=2;
+}])
+.controller('projectCreateCtrl',['$scope','projectCreateModel',function($scope,list){
 	
 }])

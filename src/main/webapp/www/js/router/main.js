@@ -55,7 +55,35 @@ router.config(['$routeProvider', function($routeProvider){
 		.when('/idea/list', {
             controller : 'ideaListCtrl',
             templateUrl : 'template/idea/list.html'			
-		})		
+		})
+		.when('/project/list', {
+            controller : 'projectListCtrl',
+            templateUrl : 'template/project/list.html'			
+		})
+		.when('/project/create_step1', {
+            controller : 'projectCreateCtrl',
+            templateUrl : 'template/project/list.html'			
+		})
+		.when('/project/create_step2', {
+            controller : 'projectCreateCtrl',
+            templateUrl : 'template/project/list.html'			
+		})
+		.when('/project/create_step3', {
+            controller : 'projectCreateCtrl',
+            templateUrl : 'template/project/list.html'			
+		})
+		.when('/project/create_step4', {
+            controller : 'projectCreateCtrl',
+            templateUrl : 'template/project/list.html'			
+		})
+		.when('/project/create_step5', {
+            controller : 'projectCreateCtrl',
+            templateUrl : 'template/project/list.html'			
+		})
+		.when('/project/create_step6', {
+            controller : 'projectCreateCtrl',
+            templateUrl : 'template/project/list.html'			
+		})				
         .otherwise({
             redirectTo : 'homepage'
         });
