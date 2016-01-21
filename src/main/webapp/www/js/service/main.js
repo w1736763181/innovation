@@ -42,9 +42,28 @@ service.factory('upload', ['$http', function($http) {
 			idea.imgsSrc.length=0;
 			idea.files.length=0;
 		}
+
+		var get_idea=function(){
+			var test_idea={
+				title:'haha this is title',
+				author:'Siqi Zhuo',
+				description:'this is description This is another complete Spring MVC tutorial which ' +
+				'accepts file on Upload form and copy it to specific folder on “Submit” event. ' +
+				'As usual we have a dependency on Hello World Spring MVC Example.',
+				type:'3',
+				impact:'huge impact This is another complete Spring MVC tutorial which ' +
+				'accepts file on Upload form and copy it to specific folder on “Submit” ' +
+				'event. As usual we have a dependency on Hello World Spring MVC Example.',
+				imgsSrc:[],
+				files:['http://fujian.86516.com/forum/201209/28/16042484m9y9izwbrwuixj.jpg',
+					'http://www.pp3.cn/uploads/allimg/111118/10562Cb5-13.jpg'],
+			}
+			return test_idea;
+		}
 		return{
 			idea:idea,
-			clear:clear
+			clear:clear,
+			get:get_idea
 		}
 	}])
 	.factory('ideaListModel',[function(){
@@ -57,7 +76,7 @@ service.factory('upload', ['$http', function($http) {
 			like: 8,
 			description:'fdsafdsfds fda fdsa fdsaf  da f dsa f dsf a dsf ds f dsa f dsa f dsaf ads fds ',
 			src:'https://www.baidu.com/img/bd_logo1.png',
-			type:'/img/animals/4lion_idea.png',
+			type:'img/animals/4lion_idea.png',
 			date:'2016-01-19 16:22',
 			pjState:'1'
 		}
@@ -118,7 +137,7 @@ service.factory('upload', ['$http', function($http) {
 			like: 8111,
 			description:'fdsafdsfds fda fdsa fdsaf  da f dsa f dsf a dsf ds f dsa f dsa f dsaf ads fds ',
 			src:'https://www.baidu.com/img/bd_logo1.png',
-			type:'/img/animals/4lion_idea.png',
+			type:'img/animals/4lion_idea.png',
 			date:'2016-01-19 16:22',
 			pjState:'4'
 		}

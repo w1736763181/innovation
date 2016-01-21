@@ -6,14 +6,14 @@
         <div>
             <div class="top-content">
                 <img class="icon" ng-src="img/head.png" />
-                <p class="title">{{item.title}}</p>
-                <p class="creator">{{item.author}}</p>
+                <p class="title">{{idea.title}}</p>
+                <p class="creator">{{idea.author}}</p>
             </div>
             <div class="idea-pics">
                 <ul rn-carousel  rn-carousel-index="carouselIndex" class="image">
-                    <li  ng-repeat="image in item.src track by $index">
+                    <li  ng-repeat="image in idea.files track by $index">
                         <div ng-style="{'background-image': 'url(' + image + ')'}">
-                            <div rn-carousel-indicators ng-if="item.src.length > 1" slides="item.src" rn-carousel-index="carouselIndex"></div>
+                            <div rn-carousel-indicators ng-if="idea.files.length > 1" slides="idea.files" rn-carousel-index="carouselIndex"></div>
                         </div>
                     </li>
                 </ul>
@@ -21,13 +21,16 @@
             <div class="idea-content">
                 <div class="description">
                     <label class="desclable">Description</label>
-                    <p class="desctext">{{item.description}}</p>
+                    <p class="desctext">{{idea.description}}</p>
                 </div>
                 <div class="bi">
                     <label class="bilable">Business Impact</label>
-                    <p class="bitext">{{item.impact}}</p>
+                    <p class="bitext">{{idea.impact}}</p>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="idea_detail_bottom">
+        <img ng-src="img/egg.png" />
     </div>
 </div>

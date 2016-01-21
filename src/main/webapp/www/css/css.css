@@ -1188,3 +1188,17 @@ nav.inverse a:hover {
   padding-right:1em;
   color:#363636;
 }
+#idea-preview .idea_detail_bottom{
+  bottom:0;
+  position:fixed;
+  height:3em;
+  width:100%;
+  border:1px solid grey;
+  background-color:white;
+}
+#idea-preview .idea_detail_bottom img{
+  position:fixed;
+  width:2em;
+  right:1em;
+  bottom:0em;
+}

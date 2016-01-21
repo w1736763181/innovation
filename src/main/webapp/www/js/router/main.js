@@ -60,7 +60,7 @@ router.config(['$routeProvider', function($routeProvider){
             controller : 'projectListCtrl',
             templateUrl : 'template/project/list.html'
         })
-        .when('/list/:id', {
+        .when('/idea/:id', {
             controller : 'ideaDetailCtrl',
             templateUrl : 'template/idea/idea_detail.html'
         })
