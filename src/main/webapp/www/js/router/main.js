@@ -88,6 +88,10 @@ router.config(['$routeProvider', function($routeProvider){
             controller : 'projectCreateCtrl',
             templateUrl : 'template/project/list.html'
         })
+        .when('/project/project_preview', {
+            controller : 'projectCreateCtrl',
+            templateUrl : 'template/project/project_preview.html'
+        })
         .otherwise({
             redirectTo : 'homepage'
         });

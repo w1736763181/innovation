@@ -57,6 +57,7 @@ service.factory('upload', ['$http', function($http) {
 				imgsSrc:[],
 				files:['http://fujian.86516.com/forum/201209/28/16042484m9y9izwbrwuixj.jpg',
 					'http://www.pp3.cn/uploads/allimg/111118/10562Cb5-13.jpg'],
+				pjState:'1'
 			}
 			return test_idea;
 		}
@@ -158,6 +159,12 @@ service.factory('upload', ['$http', function($http) {
 	}])
 	.factory('projectCreateModel',[function(){
 		var project={
+			projectMember:[{image:'img/animals/3giraffe_readyfordone.png',name:'Terrence Dong'},
+				{image:'img/animals/6lion_readyfordone.png',name:'Jason Wu'},
+				{image:'img/animals/9monkey_readyfordone.png',name:'Liang Tang'},
+				{image:'img/animals/3giraffe_readyfordone.png',name:'Siqi Zhuo'},
+				{image:'img/animals/6lion_readyfordone.png',name:'Jason Wu'},
+				{image:'img/animals/9monkey_readyfordone.png',name:'Liang Tang'}]
 		}
 		var clear=function(){
 
