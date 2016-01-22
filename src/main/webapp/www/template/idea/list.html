@@ -1,6 +1,6 @@
 <div id="idea-list">
 	<nav nav-top data-left="<" data-center="Idea"
-		 fn-left="go()"></nav>
+	     fn-left="go()"></nav>
 	<div wrap-scroll="wrap" id="wrap">
 		<div>
 			<p class="list-header">
@@ -14,14 +14,14 @@
 					<div class="avatar">
 						<img ng-src="{{item.type}}"/>
 					</div>
-					<h4>{{item.title}}</h4>
+					<h4 ng-click="go('/idea/{{item.id}}','slideLeft')">{{item.title}}</h4>
 					<p>
 						<a class="author" ng-click="go('/user/{{item.authorLink}}','slideLeft')">{{item.author}}</a>
 						<i class="like">{{item.like}}like</i>
 					</p>
 				</div>
-				<div ng-click="go('/idea/{{item.id}}','slideLeft')"  class="img">
-					<img ng-src="{{item.src}}" />
+				<div class="img">
+					<img ng-click="go('/idea/{{item.id}}','slideLeft')"  ng-src="{{item.src}}" />
 					<p class="description">
 						{{item.description}}
 					</p>
