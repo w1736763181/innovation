@@ -106,7 +106,11 @@ router.config(['$routeProvider', function($routeProvider){
         })		
 		.when('/404', {
             templateUrl : 'template/404.html'			
-		})		
+		})
+        .when('/project/:id', {
+            controller : 'projectDetailCtrl',
+            templateUrl : 'template/project/project_detail.html'
+        })
         .otherwise({
             redirectTo : '404'
         });

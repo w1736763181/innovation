@@ -849,9 +849,11 @@ nav.inverse a:hover {
   width: 18%;
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: 2em 2em;
+  background-size: 2.6em 2.6em;
   vertical-align: bottom;
-  line-height: 6em;
+  line-height: 8em;
+  font-size: 0.8em;
+  background-position-y : 0.4em;
 }
 .list-bottom a.idea {
   background-image: url('../img/icon/idea_normal.png');
@@ -869,15 +871,11 @@ nav.inverse a:hover {
 .list-bottom a.project:hover {
   background-image: url('../img/icon/project_selected.png');
 }
-.list-bottom a.egg {
-  background-image: url('../img/icon/create_normal.png');
-  background-size: 3em 4em;
-  transform: translate3d(0, -1em, 0);
-  -webkit-transform: translate3d(0, -1em, 0);
-}
-.list-bottom a.egg:active,
-.list-bottom a.egg:hover {
-  background-image: url('../img/icon/create_selected.png');
+.list-bottom a.egg img{
+  width: 4.3em;
+  height:6em;
+  position: relative;
+  top:-1.6em;
 }
 .list-bottom a.people {
   background-image: url('../img/icon/people_normal.png');
@@ -1638,6 +1636,11 @@ nav.inverse a:hover {
   color:#32CD32;
   bottom:0;
 }
+.preview_detail_header .statusLable{
+  position:absolute;
+  right:6.5em;
+  bottom:0;
+}
 .preview_detail_pics{
   margin-top:1em;
   height:15em;
@@ -1681,5 +1684,16 @@ nav.inverse a:hover {
 .preview_detail_content .project_member .pm .pm_name{
   font-size:0.6em;
   width:4em;
+  text-align:center;
+}
+.preview_detail_content .project_member .add{
+  display:inline-block;
+  margin-left:1em;
+}
+.preview_detail_content .project_member .add img{
+  width:2em;
+}
+.preview_detail_content .project_member .add p{
+  font-size:0.6em;
   text-align:center;
 }

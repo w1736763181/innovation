@@ -77,7 +77,7 @@ service.factory('upload', ['$http', function($http) {
 			like: 8,
 			description:'fdsafdsfds fda fdsa fdsaf  da f dsa f dsf a dsf ds f dsa f dsa f dsaf ads fds ',
 			src:'https://www.baidu.com/img/bd_logo1.png',	
-			type:'/img/animals/4lion_idea.png',	
+			type:'img/animals/4lion_idea.png',
 			date:'2016-01-19 16:22',
 			pjState:'1'
 		}
@@ -138,7 +138,7 @@ service.factory('upload', ['$http', function($http) {
 			like: 8111,
 			description:'fdsafdsfds fda fdsa fdsaf  da f dsa f dsf a dsf ds f dsa f dsa f dsaf ads fds ',
 			src:'https://www.baidu.com/img/bd_logo1.png',	
-			type:'/img/animals/4lion_idea.png',	
+			type:'img/animals/4lion_idea.png',
 			date:'2016-01-19 16:22',
 			pjState:'4'
 		}

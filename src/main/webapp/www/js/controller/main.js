@@ -174,3 +174,6 @@ mainCtcl.controller('homepageCtrl', ['$scope','userMeModel', function($scope,use
 .controller('ideaDetailCtrl', ['$scope', 'ideaModel', '$routeParams', function ($scope, idea, $routeParams) {
 	$scope.idea = idea.get();
 }])
+.controller('projectDetailCtrl', ['$scope', 'projectModel', '$routeParams', function ($scope, project, $routeParams){
+	$scope.project = project.project;
+}])
