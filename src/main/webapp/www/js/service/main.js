@@ -193,3 +193,19 @@ service.factory('upload', ['$http', function($http) {
 		users:users
 	}
 }])
+.factory('projectModel', [function () {
+	var project={
+		projectMember:[{image:'img/animals/3giraffe_readyfordone.png',name:'Siqi Zhuo'},
+			{image:'img/animals/6lion_readyfordone.png',name:'Jason Wu'},
+			{image:'img/animals/3giraffe_readyfordone.png',name:'Siqi Zhuo'}],
+		title:'kjscnadscaca',
+		description:'dabxjkasbcxhjasbcas',
+		plannedPeriod:'2016.01-2016.04',
+		owner:'Siqi Zhuo',
+		image:['http://fujian.86516.com/forum/201209/28/16042484m9y9izwbrwuixj.jpg',
+			'http://www.pp3.cn/uploads/allimg/111118/10562Cb5-13.jpg']
+	}
+	return{
+		project:project
+	}
+}])
