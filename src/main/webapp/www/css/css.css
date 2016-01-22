@@ -854,6 +854,8 @@ nav.inverse a:hover {
   line-height: 8em;
   font-size: 0.8em;
   background-position-y : 0.4em;
+  font-weight: bold;
+  color:#363636;
 }
 .list-bottom a.idea {
   background-image: url('../img/icon/idea_normal.png');
