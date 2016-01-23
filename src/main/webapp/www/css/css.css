@@ -1669,12 +1669,6 @@ nav.inverse a:hover {
   border:1px solid grey;
   background-color:white;
 }
-.detail_page_bottom img{
-  position:fixed;
-  width:2em;
-  right:1em;
-  bottom:0em;
-}
 .preview_detail_content .project_member .pm{
   display:inline-block;
   margin-left:1em;
@@ -1698,4 +1692,40 @@ nav.inverse a:hover {
 .preview_detail_content .project_member .add p{
   font-size:0.6em;
   text-align:center;
+}
+.detail_page_bottom .fa-heart {
+  color:red;
+  padding-top:0.3em;
+  display:inline-block;
+  padding-left:75%;
+}
+.detail_page_bottom .detail_likes {
+  color: red;
+  font-weight: bold;
+  font-size: 1.3em;
+  display:inline-block;
+}
+#idea-list .fa-heart-o{
+  float: right;
+  margin-right: 1em;
+  color:red;
+}
+#idea-list .fa-heart{
+  float: right;
+  margin-right: 1em;
+  color:red;
+}
+#project-list .fa-heart-o{
+  float: right;
+  margin-right: 1em;
+  color:red;
+}
+#project-list .fa-heart{
+  float: right;
+  margin-right: 1em;
+  color:red;
+}
+
+.list_likes{
+  font-size: 0.5em;
 }
