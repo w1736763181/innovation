@@ -1,0 +1,15 @@
+<div id="coin-histroy">
+	<nav nav-top data-center="Gold coin Histroy"
+	     fn-left="go()"></nav>
+	<div class="list">
+		<div class="item" ng-repeat="item in list track by $index">
+			<p class="tit">
+				<span class="detail">{{item.detail}}</span>
+				<span class="num">{{item.type=='add'?'+':'-'}}{{item.number}}</span>
+			</p>
+			<p class="date">
+				{{item.date}}
+			</p>
+		</div>
+	</div>
+</div>

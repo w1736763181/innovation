@@ -99,13 +99,22 @@ service.factory('upload', ['$http', function($http) {
 	.factory('userMeModel', ['$rootScope',function($rootScope){
 		var user={
 			isLogin:false,
-			model:{},
+			model:{
+			},
 			login:function(username,pwd){
 				//HTTP POST
 				//SET COOKIE
 				//-----SUCCESS
 				this.isLogin=true;
-				this.model={};
+				this.model={
+					avatar:'/img/head.png',
+					username:'Aoron Hall',
+					name:'Aoron',
+					department:'Development',
+					email:'fa@qq.com',
+					mobile:'21321321',
+					coin:123					
+				};
 			},
 			logout:function(){
 				this.isLogin=false;
@@ -128,6 +137,24 @@ service.factory('upload', ['$http', function($http) {
 
 		return user;
 	}])
+	.factory('userInfoModel', [function(){
+		var user={
+			avatar:'/img/head.png',
+			name:'Aoron',
+			department:'Development',
+			email:'fa@qq.com',
+			mobile:'21321321',
+			coin:123
+		};
+		var get_user=function(id){
+			//MOCK
+			return user;
+		}
+		
+		return {
+			get:get_user
+		};
+	}])	
 	.factory('projectListModel', ['$rootScope',function($rootScope){
 		//TEST
 		var temp_item={
@@ -185,7 +212,7 @@ service.factory('upload', ['$http', function($http) {
 		var users=[];
 		for(var i=0;i<100;i++){
 			users[i]={
-				avatar:'',
+				avatar:'img/head.png',
 				name: randName(),
 				id:i
 			}
@@ -210,3 +237,19 @@ service.factory('upload', ['$http', function($http) {
 			project:project
 		}
 	}])
+	.factory('coinListModel', [function () {
+		var coin={
+			detail:'voted for the idea',
+			date:'2015.03.01 10:01',
+			number:30,
+			type:'add'
+		};
+		var coins=[coin,angular.copy(coin),angular.copy(coin),angular.copy(coin),angular.copy(coin)]
+		var get=function(id){
+			//MOCK
+			return coins;
+		}
+		return{
+			get:get
+		}
+	}])	

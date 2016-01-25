@@ -69,8 +69,40 @@ mainCtcl.controller('homepageCtrl', ['$scope','userMeModel', function($scope,use
 			//FAILED
 		}
 	}])
-	.controller('userListCtrl', ['$scope', function($scope){
-
+	.controller('userInfoCtrl', ['$scope','$routeParams', 'userMeModel','userInfoModel', 'projectListModel', 'ideaListModel', function($scope, $routeParams, meModel, info, pjModel, IdeaModel){
+		meModel.needLogin();
+		
+		var id=$routeParams.id,userinfo;
+		if(id!==+id){
+			$scope.listType=4;
+			$scope.name="Me";
+			id=meModel.model.id;
+		}else{
+			$scope.listType=3;
+			userinfo=info.get(id);
+			$scope.name=info.name;
+		}
+		
+		$scope.me=meModel.model;
+		
+		$scope.type=1;
+		
+		$scope.list=pjModel.get();
+		
+		$scope.changeType=function(i){
+			$scope.type=i;
+			$scope.list= i==1?ideaModel.get(id):pjModel.get(id);
+		}
+	}])	
+	.controller('coinCtrl', ['$scope', 'userMeModel', 'coinListModel', function($scope, me, coin){
+		me.needLogin();
+		$scope.list=coin.get(me.model.id);
+	}])	
+	.controller('userListCtrl', ['$scope', 'userListModel', function($scope,list){
+		var list=list.users;
+		$scope.list=list;
+		$scope.total=list.length;
+		$scope.listType=3;
 	}])
 	.controller('userAddProjectCtrl', ['$scope', 'projectCreateModel', 'userListModel', function($scope,pj,userList){
 		var users=angular.copy(userList.users);

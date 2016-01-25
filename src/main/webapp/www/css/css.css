@@ -36,6 +36,9 @@ textarea {
 input {
   font-family: comfortaa;
 }
+ul{
+  list-style-type:none;
+}
 .input {
   background: transparent;
   outline: none;
@@ -174,6 +177,9 @@ nav.inverse a:hover {
 }
 #homepage .btn {
   margin-right: 2%;
+}
+#homepage .btn.btn-left {
+  display:none;
 }
 #homepage .block {
   position: absolute;
@@ -457,7 +463,8 @@ nav.inverse a:hover {
   height: 100%;
   position: relative;
 }
-#user-add-list .content .search {
+/*search bar begin*/
+.content .search {
   margin-top: 3em;
   position: absolute;
   width: 100%;
@@ -466,7 +473,7 @@ nav.inverse a:hover {
   z-index: 9;
   background: #F9F0EB;
 }
-#user-add-list .content .search input {
+.content .search input {
   outline: none;
   width: 96%;
   margin: 0 2%;
@@ -475,10 +482,11 @@ nav.inverse a:hover {
   border-radius: 5px;
   -webkit-border-radius: 5px;
 }
-#user-add-list .content .search input::-webkit-input-placeholder {
+.content .search input::-webkit-input-placeholder {
   color: #edd3c4;
   font-family: comfortaa;
 }
+/*search bar end*/
 #user-add-list .content #wrap3 {
   position: absolute;
   left: 0;
@@ -1016,8 +1024,8 @@ nav.inverse a:hover {
   position: relative;
 }
 #project-list .list-item .item-h .avatar {
-  width: 4em;
-  height: 4em;
+  width: 3em;
+  height: 3em;
 }
 #project-list .list-item .item-h .avatar img {
   width: 100%;
@@ -1026,7 +1034,7 @@ nav.inverse a:hover {
 #project-list .list-item .item-h h4,
 #project-list .list-item .item-h p {
   position: absolute;
-  left: 4.5em;
+  left: 4em;
   right: 0;
   top: 0;
   height: 2em;
@@ -1728,4 +1736,123 @@ nav.inverse a:hover {
 
 .list_likes{
   font-size: 0.5em;
+}
+
+
+#wrap-me{
+	position:absolute;
+	width:100%;
+}
+#wrap-me .profile .img{
+	display:inline-block;
+	width:3em;
+	height:3em;
+	padding:0.5em;
+	border-radius:1.5em;
+	overflow:hidden;
+}
+#wrap-me .profile .img img{
+	width:100%;height:100%;
+}
+#wrap-me .profile .txt{
+	display:inline-block;
+}
+#wrap-me .profile .txt h3{
+	
+}
+#wrap-me .profile .txt .dep{
+	color:#E2A393;
+	margin-top:0.3em;
+}
+#wrap-me .profile .txt .contact{
+	margin-top:0.3em;
+}
+#wrap-me .contact i{
+	margin-right:0.5em;
+	color:#E2A393;
+}
+#wrap-me .contact i.fa-mobile-phone{
+	margin-left:2em;
+	font-size:1.3em;
+}
+#wrap-me .coin{
+	margin-top:1em;
+	padding-top:0.5em;
+	padding-left:4em;
+	border-top:1px solid #efefef;
+	color:#E2A393;
+}
+#wrap-me .coin  .fa-stack{
+	color:#ECD942;
+}
+#wrap-me .coin  .fa-chevron-right{
+	color:#888;
+	float:right;
+	vertical-align:middle;
+	position:relative;
+	top:0.5em;right:1em;
+}
+#wrap-me .tabs{
+	display:flex;
+	text-align:center;
+	margin-top:0.5em;
+	cursor:pointer;
+}
+#wrap-me .tabs li{
+	 flex: 1;
+	 border-top:1px solid #E2A393;
+	 border-bottom:1px solid #E2A393;
+	 color:#E2A393;
+	 padding:0.5em;
+	 transition:background 0.4s;
+	 .user-select:none;
+}
+#wrap-me .tabs li.active{
+	background-color:#F79112;
+	color:#fff;
+}
+#wrap-me .list-item{
+	margin-top:0.5em;
+}
+
+#coin-histroy{
+	margin-top:3em;
+	height:100%;
+	background:#fff;
+}
+#coin-histroy .item{
+	padding:1em;
+	border-bottom:1px solid #eee;
+}
+#coin-histroy .item .tit .num{
+	float:right;
+	color:#D2A319;
+}
+#coin-histroy .item .date{
+	color:#BB9D9D;
+	font-size:0.8em;
+}
+#user-list ul{
+	padding-top:6em;
+	position:absolute;
+	height:100%;
+	background:white;
+	margin-bottom:10em;
+}
+#user-list li{
+	display:inline-block;
+	width:4em;
+	height:4em;
+	padding:0.5em 1em;
+	pointer:cursor;
+}
+#user-list li img{
+	width:100%;
+	height:100%;
+}
+#user-list li span{
+	display:inline-block;
+	text-align:center;
+	width:4em;
+	overflow:hidden;
 }
