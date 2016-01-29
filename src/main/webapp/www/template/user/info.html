@@ -19,12 +19,17 @@
 					</p>
 				</div>
 			</div>
-			<p class="coin" ng-click="go('/user/coin_histroy','slideLeft')">
+			<p class="coin" ng-click="go('/user/coin_histroy','slideLeft')" ng-show="userType">
 				<span class="fa-stack">
 				  <i class="fa fa-circle fa-stack-2x"></i>
 				  <i class="fa fa-dollar fa-stack-1x fa-inverse"></i>
 				</span>
 				{{me.coin}}
+				<i class="fa fa-chevron-right"></i>
+			</p>		
+			<p class="coin message" ng-click="go('/user/message','slideLeft')" ng-show="userType">
+				<i class="fa fa-bell fa-2x"></i>
+				{{me.messageNum}}
 				<i class="fa fa-chevron-right"></i>
 			</p>			
 			<ul class="tabs">

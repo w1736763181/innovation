@@ -1,0 +1,17 @@
+<div id="message-list">
+	<nav nav-top data-center="Message"
+	     fn-left="go()"></nav>
+	<div class="list">
+		<div class="item" ng-repeat="item in list track by $index" ng-class="{read:item.unread==0}">
+			<p class="tit" ng-click="showModal(item.msg,item.type,item.pjType)">
+				{{item.msg}}
+			</p>
+			<p class="date">
+				{{item.date}}
+			</p>
+		</div>
+	</div>
+	<div ng-show="show" class="modal" data-title="Message" data-content="{{content}}" 
+	  fn-ok="reject()" fn-cancel="" data-ok="Reject" data-cancel="Accept"></div>
+	<div modal2 pj-pic='pjPic' show2="show2" content='content'></div>
+</div>
